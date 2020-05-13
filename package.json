@@ -1,0 +1,40 @@
+{
+  "name": "typescript-express-rest-starter",
+  "version": "1.0.0",
+  "description": "TypeScript Express REST Starter",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon --exec ts-node src/index.ts development",
+    "build": "tsc -p .",
+    "start": "node dist/index.js production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "TypeScript",
+    "Express",
+    "REST",
+    "Starter"
+  ],
+  "author": "Amogh Madan",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/async": "^3.2.0",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/helmet": "0.0.45",
+    "@types/morgan": "^1.9.0",
+    "@types/node": "^13.13.0",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "@typescript-eslint/parser": "^2.28.0",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.3",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "morgan": "^1.10.0"
+  }
+}
