@@ -13,9 +13,17 @@ Kick-starter to your REST application.
     - src
         - index.ts
         - App.ts
+        - controllers
+            - person.controller.ts
+            - root.controller.ts
+        - interfaces
+            - person.interface.ts
+        - models
+            - person.model.ts
         - routes
             - index.ts
-            - root.ts
+            - person.route.ts
+            - root.route.ts
     - resources
         - development.json
         - prodcution.json
