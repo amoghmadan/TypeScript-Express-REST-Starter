@@ -4,9 +4,9 @@
   "description": "TypeScript Express REST Starter",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon --exec ts-node src/index.ts development",
+    "serve": "nodemon --exec ts-node src/index.ts",
     "build": "tsc -p .",
-    "start": "node dist/index.js production",
+    "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
