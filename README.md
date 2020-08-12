@@ -10,23 +10,29 @@ Kick-starter to your REST application.
     Production: npm start
 
 ## Project Structure
-    - src
-        - index.ts
-        - App.ts
-        - controllers
-            - person.controller.ts
-            - root.controller.ts
-        - interfaces
-            - person.interface.ts
-        - models
-            - person.model.ts
-        - routes
-            - index.ts
-            - person.route.ts
-            - root.route.ts
-    - resources
-        - development.json
-        - prodcution.json
+    .
+    ├── LICENSE
+    ├── package.json
+    ├── package-lock.json
+    ├── README.md
+    ├── resources
+    │   ├── development.json
+    │   └── production.json
+    ├── src
+    │   ├── App.ts
+    │   ├── controllers
+    │   │   ├── person.controller.ts
+    │   │   └── root.controller.ts
+    │   ├── index.ts
+    │   ├── interfaces
+    │   │   └── person.interface.ts
+    │   ├── models
+    │   │   └── person.model.ts
+    │   └── routes
+    │       ├── index.ts
+    │       ├── person.route.ts
+    │       └── root.route.ts
+    └── tsconfig.json
 
 ## Deploy
     npm i -g pm2
