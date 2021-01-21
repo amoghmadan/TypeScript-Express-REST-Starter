@@ -16,22 +16,28 @@ Kick-starter to your REST application.
     ├── package-lock.json
     ├── README.md
     ├── resources
-    │   ├── development.json
-    │   └── production.json
+    │   ├── development.json
+    │   └── production.json
     ├── src
-    │   ├── App.ts
-    │   ├── controllers
-    │   │   ├── person.controller.ts
-    │   │   └── root.controller.ts
-    │   ├── index.ts
-    │   ├── interfaces
-    │   │   └── person.interface.ts
-    │   ├── models
-    │   │   └── person.model.ts
-    │   └── routes
-    │       ├── index.ts
-    │       ├── person.route.ts
-    │       └── root.route.ts
+    │   ├── App.ts
+    │   ├── controllers
+    │   │   ├── index.ts
+    │   │   ├── person.controller.ts
+    │   │   └── root.controller.ts
+    │   ├── index.ts
+    │   ├── interfaces
+    │   │   ├── config.interface.ts
+    │   │   ├── index.ts
+    │   │   └── models
+    │   │       ├── index.ts
+    │   │       └── person.interface.ts
+    │   ├── models
+    │   │   ├── index.ts
+    │   │   └── person.model.ts
+    │   └── routes
+    │       ├── index.ts
+    │       ├── person.route.ts
+    │       └── root.route.ts
     └── tsconfig.json
 
 ## Deploy
