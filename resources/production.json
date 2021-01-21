@@ -1,4 +1,12 @@
 {
     "port": 80,
-    "mongoUri": "mongodb://127.0.0.1:27017/production"
+    "mongo": {
+        "uri": "mongodb://127.0.0.1:27017/production",
+        "options": {
+            "useCreateIndex": true,
+            "useFindAndModify": true,
+            "useNewUrlParser": true,
+            "useUnifiedTopology": true
+        }
+    }
 }

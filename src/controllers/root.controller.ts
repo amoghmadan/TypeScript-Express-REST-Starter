@@ -1,9 +1,9 @@
-import { Request, Response } from 'express';
+import { Request, Response } from "express";
 
 
 class RootController {
-    helloWorld = async (req: Request, res: Response): Promise<Response<any>> => {
-        return res.json({ hello: 'World!' }).status(200);
+    async helloWorld(req: Request, res: Response): Promise<void> {
+        res.status(200).json({ hello: "World!" });
     }
 }
 

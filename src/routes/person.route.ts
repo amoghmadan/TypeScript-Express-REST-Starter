@@ -1,12 +1,12 @@
-import { Router } from 'express';
-import { personalController } from '../controllers/person.controller';
+import { Router } from "express";
+import { personalController } from "../controllers";
 
 const router: Router = Router();
 
-router.route('/')
+router.route("/")
     .get(personalController.fetchAll)
     .post(personalController.createOne);
-router.route('/:id')
+router.route("/:id")
     .get(personalController.fetchOne)
     .put(personalController.fetchOneAndUpdate)
     .delete(personalController.fetchOneAndDelete);

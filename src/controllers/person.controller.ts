@@ -1,32 +1,32 @@
-import { Request, Response } from 'express';
-import { Person } from '../interfaces/person.interface';
-import { PersonModel } from '../models/person.model';
+import { Request, Response } from "express";
+import { Person } from "../interfaces/models";
+import { PersonModel } from "../models/person.model";
 
 class PersonController {
-    fetchAll = async (req: Request, res: Response): Promise<Response<Person[] | null>> => {
-        let people: Person[] = await PersonModel.find();
-        return res.json(people).status(200);
+    async fetchAll(req: Request, res: Response): Promise<void> {
+        const people: Person[] = await PersonModel.find();
+        res.status(200).json(people);
     }
 
-    fetchOne = async (req: Request, res: Response): Promise<Response<Person | null>> => {
-        let person: Person | null = await PersonModel.findOne({ _id: req.params.id });
-        return res.json(person).status(200);
+    async fetchOne(req: Request, res: Response): Promise<void> {
+        const person: Person | null = await PersonModel.findOne({ _id: req.params.id });
+        res.status(200).json(person);
     }
 
-    createOne = async (req: Request, res: Response): Promise<Response<Person | null>> => {
-        let newPerson: Person = new PersonModel(req.body);
+    async createOne(req: Request, res: Response): Promise<void> {
+        const newPerson: Person = new PersonModel(req.body);
         await newPerson.save();
-        return res.json(newPerson).status(200);
+        res.status(201).json(newPerson);
     }
 
-    fetchOneAndUpdate = async (req: Request, res: Response): Promise<Response<Person | null>> => {
-        let person: Person | null = await PersonModel.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true });
-        return res.json(person).status(200);
+    async fetchOneAndUpdate(req: Request, res: Response): Promise<void> {
+        const person: Person | null = await PersonModel.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true });
+        res.status(200).json(person);
     }
     
-    fetchOneAndDelete = async (req: Request, res: Response): Promise<Response<Person | null>> => {
-        let person: Person | null = await PersonModel.findByIdAndDelete({ _id: req.params.id });
-        return res.json(person).status(200);
+    async fetchOneAndDelete(req: Request, res: Response): Promise<void> {
+        const person: Person | null = await PersonModel.findByIdAndDelete({ _id: req.params.id });
+        res.status(204).json(person);
     }
 }
 
