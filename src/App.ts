@@ -15,7 +15,7 @@ export default class App {
     private static INSTANCE: App;
     public static BASE_DIR: string = path.dirname(__dirname);
     public static ENV: string = process.env.ENV || "development";
-    public static config: IConfig = JSON.parse(
+    public static CONFIG: IConfig = JSON.parse(
         fs.readFileSync(path.join(App.BASE_DIR, "resources", `${App.ENV}.json`), "utf-8")
     );
 
@@ -48,8 +48,8 @@ export default class App {
     }
 
     public async run(): Promise<void> {
-        await mongoose.connect(App.config.mongo.uri, App.config.mongo.options);
-        this.server.listen(App.config.port, "::", (): void => {
+        await mongoose.connect(App.CONFIG.mongo.uri, App.CONFIG.mongo.options);
+        this.server.listen(App.CONFIG.port, "::", (): void => {
             console.log(this.server.address());
         });
     }
