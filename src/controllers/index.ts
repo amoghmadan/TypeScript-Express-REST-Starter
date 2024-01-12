@@ -1,7 +1,4 @@
-import { rootController } from "./root.controller";
-import { personalController } from "./person.controller";
+import accountsController from './accounts.controller';
 
-export {
-    rootController,
-    personalController,
-};
+// eslint-disable-next-line import/prefer-default-export
+export { accountsController };

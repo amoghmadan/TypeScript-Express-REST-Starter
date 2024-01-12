@@ -1,48 +1,33 @@
 # TypeScript-Express-REST-Starter
+
 Kick-starter to your REST application.
 
-## Setup
-    npm i
+`Node`, `Express`, `MongoDB`, `CLI` and more.
 
-## How to run?
-    Development: npm run serve
-    Build: npm run build
-    Production: npm start
+## Introduction
 
-## Project Structure
-    .
-    ├── LICENSE
-    ├── package.json
-    ├── package-lock.json
-    ├── README.md
-    ├── resources
-    │   ├── development.json
-    │   └── production.json
-    ├── src
-    │   ├── App.ts
-    │   ├── controllers
-    │   │   ├── index.ts
-    │   │   ├── person.controller.ts
-    │   │   └── root.controller.ts
-    │   ├── index.ts
-    │   ├── interfaces
-    │   │   ├── config.interface.ts
-    │   │   ├── index.ts
-    │   │   └── models
-    │   │       ├── index.ts
-    │   │       └── person.interface.ts
-    │   ├── models
-    │   │   ├── index.ts
-    │   │   └── person.model.ts
-    │   └── routes
-    │       ├── index.ts
-    │       ├── person.route.ts
-    │       └── root.route.ts
-    └── tsconfig.json
+The project is a skeleton for an experss application and the way I like to configure it.
 
-## Deploy
-    npm i -g pm2
-    pm2 --name <app_name_here> start npm -- start --watch-delay <seconds_here>
+This structure is in no way a perfect fit all the projects, but might be a great fit for most big applications.
 
-## Check Application Status
-    pm2 ps
+It contains login, logout and details for accounts, using custom token generation. The CLI provides user creation using commands and password change functionality as well.
+
+## How to setup?
+
+- Clone this project. PS: Delete the package-lock.json. You might want to rename the name & author in package.json and maintainer in Dockerfile.
+- Run: -
+  ```bash
+  npm i --location=project
+  ```
+- Add an environemnt file `.env` to the root of the project and set your MONGODB_URI. Typically: -
+  ```
+  MONGODB_URI = mongodb://127.0.0.1:27017/<appname>
+  ```
+- Create an admin user: -
+  ```bash
+  npm run dev createsuperuser
+  ```
+- Run the development server: -
+  ```bash
+  npm run dev bootstrap
+  ```
