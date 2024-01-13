@@ -11,21 +11,21 @@ import { Token, User } from '../interfaces/user';
 
 const tokenSchema: Schema<Token> = new Schema(
   {
-    key: { type: String, require: true, unique: true },
+    key: { type: String, required: true, unique: true },
   },
   { timestamps: { createdAt: 'created' } },
 );
 
 const userSchema: Schema<User> = new Schema({
-  email: { type: String, require: true, unique: true },
-  firstName: { type: String, require: true },
-  lastName: { type: String, require: true },
-  password: { type: String, require: true },
-  isAdmin: { type: Boolean, require: false, default: false },
-  isActive: { type: Boolean, require: true, default: true },
-  dateJoined: { type: Date, require: true, default: Date.now },
-  lastLogin: { type: Date, require: false },
-  token: { type: tokenSchema, require: false },
+  email: { type: String, required: true, unique: true },
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true },
+  password: { type: String, required: true },
+  isAdmin: { type: Boolean, required: false, default: false },
+  isActive: { type: Boolean, required: true, default: true },
+  dateJoined: { type: Date, required: true, default: Date.now },
+  lastLogin: { type: Date, required: false },
+  token: { type: tokenSchema, required: false },
 });
 
 userSchema.pre(
