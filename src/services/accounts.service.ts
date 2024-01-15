@@ -10,6 +10,8 @@ export default {
     const validatedData = await accountsValidator.login.validateAsync(payload);
     return accountsRepository.login(validatedData);
   },
-  detail: async (user: User): Promise<Detail> => accountsRepository.detail(user),
+  detail: async (user: User): Promise<Detail> => accountsRepository.detail(
+    user,
+  ),
   logout: async (user: User): Promise<void> => accountsRepository.logout(user),
 };
