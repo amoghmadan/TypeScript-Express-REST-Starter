@@ -5,8 +5,8 @@
   "main": "dist/app.js",
   "scripts": {
     "build": "tsc -p .",
-    "lint:check": "eslint src",
-    "lint:format": "eslint --fix src",
+    "lint:check": "eslint src tests",
+    "lint:format": "eslint --fix src tests",
     "dev": "nodemon --exec ts-node src/app.ts",
     "start": "node dist/app.js",
     "test": "jest i"
