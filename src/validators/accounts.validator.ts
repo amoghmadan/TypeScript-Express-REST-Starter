@@ -12,7 +12,6 @@ export default {
       .required()
       .label('Password (again)')
       .messages({ 'any.only': "Error: Your passwords didn't match." }),
-    isAdmin: Joi.boolean().default(false),
   }),
   login: Joi.object({
     email: Joi.string().email().required(),
