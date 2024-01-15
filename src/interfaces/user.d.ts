@@ -16,6 +16,14 @@ export interface Token {
   created?: Date;
 }
 
+export interface CreateUser {
+  email: string;
+  firstName: string;
+  lastName: string;
+  password: string;
+  passwordAgain: string;
+}
+
 export interface User extends Document {
   email: string;
   firstName: string;
