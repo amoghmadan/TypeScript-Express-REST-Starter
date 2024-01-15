@@ -13,8 +13,8 @@ export default {
       }
       return response.status(201).json(data);
     } catch (err: unknown) {
-      if (err instanceof ValidationError && err.name === 'ValidationError') {
-        return response.status(401).json({ detail: 'Invalid credentials!' });
+      if (err instanceof ValidationError) {
+        return response.status(400).json(err.details);
       }
       return response.status(500).json(err);
     }
