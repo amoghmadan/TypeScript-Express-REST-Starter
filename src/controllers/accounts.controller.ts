@@ -7,7 +7,9 @@ import { accountsService } from '../services';
 export default {
   login: async (request: Request, response: Response): Promise<Response> => {
     try {
-      const data: { token: string } | null = await accountsService.login(request.body);
+      const data: { token: string } | null = await accountsService.login(
+        request.body,
+      );
       if (!data) {
         return response.status(401).json({ detail: 'Invalid credentials!' });
       }
