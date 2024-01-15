@@ -11,7 +11,11 @@ import { MONGODB_URI } from '../settings';
  * @param {string} email
  */
 export default async function changePassword(email: string): Promise<void> {
-  const password: string = await read({ prompt: 'Password: ', replace: '*', silent: true });
+  const password: string = await read({
+    prompt: 'Password: ',
+    replace: '*',
+    silent: true,
+  });
   const passwordAgain: string = await read({
     prompt: 'Password (again): ',
     replace: '*',
@@ -19,11 +23,13 @@ export default async function changePassword(email: string): Promise<void> {
   });
 
   try {
-    const validatedData: ChangePassword = await accountsValidator.changePassword.validateAsync({
-      email,
-      password,
-      passwordAgain,
-    });
+    const validatedData: ChangePassword = await accountsValidator
+      .changePassword
+      .validateAsync({
+        email,
+        password,
+        passwordAgain,
+      });
     await mongoose.connect(MONGODB_URI);
     const user: User | null = await UserModel.findOne({
       email: validatedData.email,
