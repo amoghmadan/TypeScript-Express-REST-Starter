@@ -19,7 +19,7 @@ export function getRequestListener(): Application {
   application.use(express.json());
   application.use(morgan('combined'));
 
-  routers.forEach((router: Router, path: string) => {
+  routers.forEach((router: Router, path: string): void => {
     application.use(path, router);
   });
 

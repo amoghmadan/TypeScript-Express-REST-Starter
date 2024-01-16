@@ -30,26 +30,26 @@ yargs
     },
   )
   .command(
-    'createsuperuser',
-    'Create super user',
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    (setup: Argv<{}>) => {},
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    async (args: ArgumentsCamelCase<{}>) => {
-      await createSuperUser();
-    },
-  )
-  .command(
     'changepassword [email]',
     'Chnage password',
-    (setup: Argv<{ [key: string]: Options }>) => {
+    (setup: Argv<{ [key: string]: Options }>): void => {
       setup.positional('email', {
         description: 'Email',
         type: 'string',
       });
     },
-    async (args: ArgumentsCamelCase<{ email: string }>) => {
+    async (args: ArgumentsCamelCase<{ email: string }>): Promise<void> => {
       await changePassword(String(args.email));
+    },
+  )
+  .command(
+    'createsuperuser',
+    'Create super user',
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    (_: Argv<{}>): void => {},
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    async (_: ArgumentsCamelCase<{}>): Promise<void> => {
+      await createSuperUser();
     },
   )
   .help().argv;
