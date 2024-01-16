@@ -9,7 +9,7 @@
     "lint:format": "eslint --fix src tests",
     "dev": "nodemon --exec ts-node src/app.ts",
     "start": "node dist/app.js",
-    "test": "jest i"
+    "test": "jest -i"
   },
   "keywords": [
     "TypeScript",
