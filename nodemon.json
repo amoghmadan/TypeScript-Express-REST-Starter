@@ -1,0 +1,4 @@
+{
+  "watch": [".babelrc", "src/**/*.ts"],
+  "exec": "node -r ts-node/register --env-file=.env"
+}
