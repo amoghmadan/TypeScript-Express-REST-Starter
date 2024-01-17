@@ -195,9 +195,6 @@ const config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-
-  // Time to wait before failing, X * 1000 = X000 ms, so value below is Y / 1000 = Y s.
-  testTimeout: 30000,
 };
 
 module.exports = config;
