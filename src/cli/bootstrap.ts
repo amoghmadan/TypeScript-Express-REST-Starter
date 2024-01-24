@@ -5,8 +5,8 @@ import helmet from 'helmet';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
 
-import routers from '../routers';
-import { MONGODB_URI } from '../settings';
+import routers from '@/routers';
+import { MONGODB_URI } from '@/settings';
 
 /**
  * Create request listener

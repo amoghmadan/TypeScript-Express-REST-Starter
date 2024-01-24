@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "moduleResolution": "node10",
+    "outDir": "./dist"
+  },
+  "exclude": ["coverage", "dist", "node_modules", "tests"],
+  "extends": "./tsconfig.json"
+}

@@ -1,6 +1,6 @@
-import { Detail, User } from '../interfaces/user';
-import { accountsRepository } from '../repositories';
-import { accountsValidator } from '../validators';
+import { Detail, User } from '@/interfaces/user';
+import { accountsRepository } from '@/repositories';
+import { accountsValidator } from '@/validators';
 
 export default {
   login: async (payload: {

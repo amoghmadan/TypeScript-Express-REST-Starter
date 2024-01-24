@@ -5,11 +5,11 @@
   "description": "TypeScript Express REST Starter",
   "main": "dist/app.js",
   "scripts": {
-    "build": "tsc -p .",
+    "build": "tsc -p tsconfig.build.json",
     "dev": "nodemon src/app.ts",
     "lint:check": "eslint src tests",
     "lint:format": "eslint --fix src tests",
-    "start": "node dist/app.js",
+    "start": "node -r ts-node/register -r tsconfig-paths/register dist/app.js",
     "test": "jest -i"
   },
   "keywords": [

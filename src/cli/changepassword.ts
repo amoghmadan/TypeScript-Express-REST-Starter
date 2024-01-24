@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 import { read } from 'read';
 
-import { ChangePassword, User } from '../interfaces/user';
-import { UserModel } from '../models';
-import { accountsValidator } from '../validators';
-import { MONGODB_URI } from '../settings';
+import { ChangePassword, User } from '@/interfaces/user';
+import { UserModel } from '@/models';
+import { accountsValidator } from '@/validators';
+import { MONGODB_URI } from '@/settings';
 
 /**
  * Chnage password

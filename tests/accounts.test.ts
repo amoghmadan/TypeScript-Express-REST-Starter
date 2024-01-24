@@ -1,13 +1,12 @@
-import 'dotenv/config';
 import mongoose from 'mongoose';
 import supertest, { Response } from 'supertest';
 import TestAgent from 'supertest/lib/agent';
 
-import { getRequestListener } from '../src/cli/bootstrap';
-import { User } from '../src/interfaces/user';
-import { UserModel } from '../src/models';
-import { MONGODB_URI } from '../src/settings';
-import { generateKey } from '../src/utilities/token';
+import { getRequestListener } from '@/cli/bootstrap';
+import { User } from '@/interfaces/user';
+import { UserModel } from '@/models';
+import { MONGODB_URI } from '@/settings';
+import { generateKey } from '@/utilities/token';
 
 const ROOT_URL: string = '/api/accounts';
 const KEYWORD: string = 'Token';

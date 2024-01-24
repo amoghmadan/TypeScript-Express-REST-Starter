@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
-import { accountsController } from '../../controllers';
-import { authenticate } from '../../middlewares';
+import { accountsController } from '@/controllers';
+import { authenticate } from '@/middlewares';
 
 const accountsRouter = Router();
 accountsRouter.route('/login').post(accountsController.login);

@@ -7,7 +7,7 @@ import {
   model,
 } from 'mongoose';
 
-import { Token, User } from '../interfaces/user';
+import { Token, User } from '@/interfaces/user';
 
 const tokenSchema: Schema<Token> = new Schema(
   {

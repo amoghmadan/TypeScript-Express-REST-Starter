@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { ValidationError } from 'joi';
 
-import { Detail } from '../interfaces/user';
-import { accountsService } from '../services';
+import { Detail } from '@/interfaces/user';
+import { accountsService } from '@/services';
 
 export default {
   login: async (request: Request, response: Response): Promise<Response> => {

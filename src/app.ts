@@ -1,6 +1,6 @@
 import yargs, { ArgumentsCamelCase, Argv, Options } from 'yargs';
 
-import { bootstrap, changePassword, createSuperUser } from './cli';
+import { bootstrap, changePassword, createSuperUser } from '@/cli';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-expressions
 yargs

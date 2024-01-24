@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import accountsRouter from './accounts.router';
+import accountsRouter from '@/routers/api/accounts.router';
 
 const urlPatterns: Map<string, Router> = new Map<string, Router>([
   ['/accounts', accountsRouter],
