@@ -5,7 +5,7 @@ import helmet from 'helmet';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
 
-import routers from '@/routers';
+import routes from '@/routes';
 import { MONGODB_URI } from '@/settings';
 
 /**
@@ -19,7 +19,7 @@ export function getRequestListener(): Application {
   application.use(express.json());
   application.use(morgan('combined'));
 
-  routers.forEach((router: Router, path: string): void => {
+  routes.forEach((router: Router, path: string): void => {
     application.use(path, router);
   });
 

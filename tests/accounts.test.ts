@@ -6,7 +6,7 @@ import { getRequestListener } from '@/cli/bootstrap';
 import { User } from '@/interfaces/user';
 import { UserModel } from '@/models';
 import { MONGODB_URI } from '@/settings';
-import { generateKey } from '@/utilities/token';
+import { generateKey } from '@/utils/token';
 
 const ROOT_URL: string = '/api/accounts';
 const KEYWORD: string = 'Token';

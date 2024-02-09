@@ -1,6 +1,6 @@
 import { Detail, Login, User } from '@/interfaces/user';
 import { UserModel } from '@/models';
-import { generateKey } from '@/utilities/token';
+import { generateKey } from '@/utils/token';
 
 export default {
   login: async (payload: Login): Promise<{ token: string } | null> => {
